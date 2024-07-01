@@ -1,0 +1,17 @@
+{
+    "builds": [
+      {
+        "src": "index3.html",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "dist/penalty_kicks"
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/index.html"
+      }
+    ]
+  }
