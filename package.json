@@ -7,7 +7,7 @@
     "start": "vite",
     "start:static": "sudo http-server -a localhost -p 80 -o ./penalty_kicks/index3.html",
     "dev": "vite --host",
-    "build": "javascript-obfuscator ./public --compact true --disable-console-output true && vite build",
+    "build": "javascript-obfuscator ./public --compact true --disable-console-output true && vite build && rm -rf .vercel/output/static && cp -R ./dist/penalty_kicks .vercel/output && mv .vercel/output/penalty_kicks .vercel/output/static",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
